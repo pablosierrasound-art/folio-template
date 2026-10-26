@@ -67,6 +67,29 @@ html[data-theme="dark"] .hero-collage-image::after{background:linear-gradient(90
 @media(max-width:900px){.hero-collage-image{width:100vw;right:-18vw;top:10rem;height:65%;opacity:.28}.hero-collage-image::after{background:linear-gradient(90deg,var(--color-bg),transparent 75%)}}
 @media(max-width:600px){.hero-collage-image{width:140vw;right:-60vw;top:9rem;height:430px;opacity:.17;background-position:right center}html[data-theme="dark"] .hero-collage-image{opacity:.15}}
 </style>
+<style>
+/* Ajustes móviles: tipografía sin desbordamientos y collage sin zoom */
+@media(max-width:767px){
+  html,body{width:100%;max-width:100%;overflow-x:clip}
+  #main>section:first-child{min-height:100svh;padding-top:7.5rem;padding-bottom:2.5rem;overflow:hidden;justify-content:center}
+  #main>section:first-child .hero-content{width:100%;min-width:0}
+  #main>section:first-child h1{font-size:clamp(2.15rem,8.25vw,4.65rem)!important;letter-spacing:-.035em!important;line-height:1.02!important;max-width:100%;overflow-wrap:normal;text-shadow:none}
+  #main>section:first-child h1 .reveal-line{display:block;overflow:hidden!important;margin-bottom:0;padding-bottom:.09em}
+  #main>section:first-child h1 .reveal-line>span{display:block;white-space:nowrap}
+  #main>section:first-child .hero-content>div:last-child{margin-top:2.25rem;gap:1.25rem}
+  #main>section:first-child .hero-content>div:last-child .btn{justify-content:center}
+  .hero-collage-image{top:5rem!important;right:0!important;width:100%!important;height:48%!important;background-size:contain!important;background-position:right top!important;opacity:.17!important;mix-blend-mode:multiply}
+  html[data-theme="dark"] .hero-collage-image{opacity:.12!important;mix-blend-mode:screen}
+  .hero-collage-image::after{background:linear-gradient(0deg,var(--color-bg),transparent 80%)!important}
+  .site-header .container-x{gap:.5rem}
+  .site-header .theme-switch{padding:.45rem;min-width:42px}
+  .site-header .theme-switch [data-theme-label]{display:none}
+}
+@media(max-width:380px){
+  #main>section:first-child h1{font-size:8vw!important;letter-spacing:-.045em!important}
+  #main>section:first-child .hero-content>div:last-child .btn{font-size:.85rem}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
