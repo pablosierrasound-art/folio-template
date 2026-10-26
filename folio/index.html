@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NO a la incineradora en Titulcia | Defendamos nuestro entorno</title>
   <meta name="description" content="Información y movilización ciudadana contra el proyecto de incineradora en Titulcia. Conoce las preocupaciones y participa.">
-  <meta name="theme-color" content="#0b0b0c">
-  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="No a la incineradora en Titulcia">
   <meta property="og:title" content="NO a la incineradora en Titulcia">
@@ -19,11 +19,27 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..800&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js');</script>
+<style>
+/* Colores exclusivos de la home. Día es el modo predeterminado. */
+html[data-theme="light"] {--color-bg:#f7f6f2;--color-surface:#eeede7;--color-raised:#e5e4dd;--color-line:#d8d6ce;--color-ink:#171817;--color-muted:#656760;--color-accent:#d83c24;color-scheme:light}
+html[data-theme="dark"] {--color-bg:#0b0b0c;--color-surface:#141416;--color-raised:#1c1c1f;--color-line:#27272b;--color-ink:#f3f0e9;--color-muted:#a29e96;--color-accent:#ff5b2e;color-scheme:dark}
+html,body,.site-header,.mobile-menu {transition:background-color .35s ease,color .35s ease,border-color .35s ease}
+.theme-switch {display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-width:44px;min-height:44px;padding:.45rem .75rem;border:1px solid var(--color-line);border-radius:999px;color:var(--color-ink);background:var(--color-surface);cursor:pointer;font-size:.85rem;font-weight:600}
+.theme-switch:hover {border-color:var(--color-muted)}
+.theme-switch svg {width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme-switch .theme-moon {display:block}.theme-switch .theme-sun {display:none}
+html[data-theme="dark"] .theme-switch .theme-moon {display:none}
+html[data-theme="dark"] .theme-switch .theme-sun {display:block}
+html[data-theme="light"] .btn-primary {color:#fff}
+html[data-theme="light"] .btn-primary:hover {color:#fff;background:#a72d1c}
+html[data-theme="light"] .site-header.is-scrolled {background:rgba(247,246,242,.88)}
+html[data-theme="dark"] .site-header.is-scrolled {background:rgba(11,11,12,.88)}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <header class="site-header fixed inset-x-0 top-0 z-50"><div class="container-x flex h-20 items-center justify-between gap-6"><a href="#main" class="group flex items-center gap-2 text-lg font-semibold tracking-tight"><span class="grid size-8 place-items-center rounded-full bg-ink font-serif text-xl italic text-bg" aria-hidden="true">!</span><span>Defendamos Titulcia</span></a><nav aria-label="Navegación" class="hidden md:block"><ul class="flex items-center gap-10 text-[0.95rem]"><li><a href="#informacion" class="nav-link">Información</a></li><li><a href="#impacto" class="nav-link">Qué nos preocupa</a></li><li><a href="#participa" class="nav-link">Participa</a></li></ul></nav><a href="#participa" class="btn btn-primary hidden md:inline-flex">Hazte escuchar &rarr;</a><button type="button" class="menu-toggle -mr-2 flex size-11 flex-col items-center justify-center gap-[6px] md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button></div><div id="mobile-menu" class="mobile-menu fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-bg md:hidden" hidden><nav aria-label="Menú móvil" class="container-x pt-6 pb-10"><ul><li><a href="#main" class="flex border-b border-line py-5 text-3xl">Inicio</a></li><li><a href="#informacion" class="flex border-b border-line py-5 text-3xl">Información</a></li><li><a href="#impacto" class="flex border-b border-line py-5 text-3xl">Qué nos preocupa</a></li><li><a href="#participa" class="flex border-b border-line py-5 text-3xl">Participa</a></li></ul></nav></div></header>
+  <header class="site-header fixed inset-x-0 top-0 z-50"><div class="container-x flex h-20 items-center justify-between gap-6"><a href="#main" class="group flex items-center gap-2 text-lg font-semibold tracking-tight"><span class="grid size-8 place-items-center rounded-full bg-ink font-serif text-xl italic text-bg" aria-hidden="true">!</span><span>Defendamos Titulcia</span></a><nav aria-label="Navegación" class="hidden md:block"><ul class="flex items-center gap-10 text-[0.95rem]"><li><a href="#informacion" class="nav-link">Información</a></li><li><a href="#impacto" class="nav-link">Qué nos preocupa</a></li><li><a href="#participa" class="nav-link">Participa</a></li></ul></nav><button type="button" class="theme-switch" data-theme-toggle aria-label="Cambiar a modo noche" title="Cambiar modo de color"><svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><span data-theme-label>Noche</span></button><a href="#participa" class="btn btn-primary hidden md:inline-flex">Hazte escuchar &rarr;</a><button type="button" class="menu-toggle -mr-2 flex size-11 flex-col items-center justify-center gap-[6px] md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><span></span><span></span></button></div><div id="mobile-menu" class="mobile-menu fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-bg md:hidden" hidden><nav aria-label="Menú móvil" class="container-x pt-6 pb-10"><ul><li><a href="#main" class="flex border-b border-line py-5 text-3xl">Inicio</a></li><li><a href="#informacion" class="flex border-b border-line py-5 text-3xl">Información</a></li><li><a href="#impacto" class="flex border-b border-line py-5 text-3xl">Qué nos preocupa</a></li><li><a href="#participa" class="flex border-b border-line py-5 text-3xl">Participa</a></li></ul></nav></div></header>
 
   <main id="main">
 <section class="container-x flex min-h-[92svh] flex-col justify-end pt-32 pb-14 md:pb-20"><div class="flex flex-wrap items-center gap-x-6 gap-y-2 reveal"><p class="eyebrow">Movilización ciudadana · Titulcia, Madrid</p><p class="eyebrow flex items-center gap-2"><span class="status-dot"></span> Nuestro entorno, nuestro futuro</p></div><h1 class="mt-8 font-semibold leading-[0.9] tracking-[-0.055em]" style="font-size:clamp(2.55rem,7.6vw,8rem);font-weight:800;letter-spacing:-0.025em"><span class="reveal-line"><span><span class="text-accent">NO</span> A LA</span></span><span class="reveal-line"><span style="--d:120ms">INCINERADORA</span></span><span class="reveal-line"><span style="--d:240ms">EN TITULCIA<span class="text-accent">.</span></span></span></h1><div class="mt-14 grid gap-10 border-t border-line pt-8 md:grid-cols-12 md:items-end reveal" style="--d:300ms"><p class="text-lg leading-relaxed text-muted md:col-span-6 md:text-xl">No queremos que el futuro de Titulcia se decida sin escuchar a sus vecinos. <span class="text-ink">Pedimos información, transparencia y protección para nuestro pueblo y su entorno natural.</span></p><div class="flex flex-wrap gap-3 md:col-span-5 md:col-start-8 md:justify-end"><a href="#participa" class="btn btn-primary">Hazte escuchar &rarr;</a><a href="#informacion" class="btn btn-outline">Conoce la información</a></div></div></section>
@@ -33,6 +49,29 @@
 </main>
 
   <footer class="mt-auto"><div class="container-x border-b border-line pt-20 pb-16"><p class="eyebrow">Un pueblo unido por su futuro</p><a href="#main" class="mt-5 block text-[clamp(2.8rem,8vw,8rem)] font-semibold leading-[0.95] tracking-tight">Titulcia <span class="serif-accent text-accent">se defiende.</span></a></div><div class="container-x flex flex-wrap items-center justify-between gap-4 py-8 text-sm text-muted"><p>Iniciativa de información y participación ciudadana · Titulcia</p><a href="#main" class="link-underline">Volver arriba &uarr;</a></div></footer>
-  <script src="assets/js/main.js"></script>
+  <script>
+(function(){
+  var root=document.documentElement;
+  var stored=null;
+  try{stored=localStorage.getItem('titulcia-theme')}catch(e){}
+  var theme=stored==='dark'?'dark':'light';
+  function setTheme(next){
+    theme=next;root.setAttribute('data-theme',theme);
+    var meta=document.querySelector('meta[name="theme-color"]');
+    if(meta)meta.content=theme==='dark'?'#0b0b0c':'#f7f6f2';
+    document.querySelectorAll('[data-theme-toggle]').forEach(function(button){
+      button.setAttribute('aria-label',theme==='dark'?'Cambiar a modo día':'Cambiar a modo noche');
+      button.setAttribute('aria-pressed',String(theme==='dark'));
+    });
+    document.querySelectorAll('[data-theme-label]').forEach(function(label){label.textContent=theme==='dark'?'Día':'Noche'});
+    try{localStorage.setItem('titulcia-theme',theme)}catch(e){}
+  }
+  setTheme(theme);
+  document.querySelectorAll('[data-theme-toggle]').forEach(function(button){
+    button.addEventListener('click',function(){setTheme(theme==='dark'?'light':'dark')});
+  });
+})();
+</script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
