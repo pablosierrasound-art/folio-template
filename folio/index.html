@@ -164,52 +164,72 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 }
 </style>
 <style>
-/* Portada móvil: collage a la derecha del título, color y recorte inferior limpio */
+/* Mobile hero refinement: hierarchy, image balance and comfortable reading */
 @media(max-width:767px){
  #main>section:first-child{
-   padding-top:6.8rem!important;
-   padding-bottom:3rem!important;
-   min-height:auto!important;
+   min-height:0!important;
+   padding-top:5.6rem!important;
+   padding-bottom:3.25rem!important;
    justify-content:flex-start!important;
+   overflow:hidden!important;
  }
+ #main>section:first-child .hero-content{position:relative;z-index:2;display:flex;flex-direction:column}
  #main>section:first-child .hero-content>div:first-child{display:none!important}
  #main>section:first-child .hero-content h1{
-   margin-top:2.5rem!important;
-   position:relative!important;
-   z-index:2!important;
+   margin-top:1.5rem!important;
+   font-size:clamp(2.25rem,8.65vw,4.85rem)!important;
+   line-height:1.02!important;
+   letter-spacing:-.035em!important;
+   position:relative;z-index:2;
  }
  #main>section:first-child .hero-collage-image{
-   top:7.7rem!important;
+   top:6.25rem!important;
    left:auto!important;
-   right:0!important;
-   width:78%!important;
-   height:19.5rem!important;
+   right:-2%!important;
+   width:79%!important;
+   height:17.5rem!important;
    background-size:cover!important;
-   background-position:64% 43%!important;
-   opacity:.9!important;
-   filter:saturate(1.32) contrast(1.06)!important;
+   background-position:62% 41%!important;
+   opacity:.92!important;
+   filter:saturate(1.22) contrast(1.05)!important;
    mix-blend-mode:normal!important;
-   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 62%,transparent 98%)!important;
-   mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 62%,transparent 98%)!important;
+   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 64%,transparent 100%)!important;
+   mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 64%,transparent 100%)!important;
+   pointer-events:none;
  }
  #main>section:first-child .hero-collage-image::after{
-   background:linear-gradient(to right,var(--color-bg) 0%,transparent 54%)!important;
+   background:linear-gradient(to right,var(--color-bg) 0%,transparent 55%)!important;
  }
  #main>section:first-child .hero-content>div:last-child{
-   margin-top:8.5rem!important;
+   margin-top:4.25rem!important;
+   padding-top:1.4rem!important;
+   gap:1.4rem!important;
    position:relative!important;
    z-index:3!important;
-   background:var(--color-bg);
+   background:transparent!important;
+ }
+ #main>section:first-child .hero-content>div:last-child::before{
+   content:"";position:absolute;z-index:-1;inset:-.5rem -1rem -1rem;
+   background:linear-gradient(to bottom,var(--color-bg) 0%,var(--color-bg) 100%);
+ }
+ #main>section:first-child .hero-content>div:last-child p{
+   font-size:clamp(1rem,4.3vw,1.16rem)!important;
+   line-height:1.58!important;
+   text-wrap:pretty;
+ }
+ #main>section:first-child .hero-content>div:last-child>div{
+   display:flex;gap:.75rem;align-items:stretch;
+ }
+ #main>section:first-child .hero-content>div:last-child .btn{
+   min-height:3rem;max-width:100%;
  }
  html[data-theme="dark"] #main>section:first-child .hero-collage-image{
-   opacity:.46!important;
-   filter:saturate(.8) contrast(1.1)!important;
-   mix-blend-mode:screen!important;
+   opacity:.48!important;filter:saturate(.8) contrast(1.1)!important;mix-blend-mode:screen!important;
  }
 }
 @media(max-width:380px){
- #main>section:first-child .hero-collage-image{height:17.5rem!important}
- #main>section:first-child .hero-content>div:last-child{margin-top:7rem!important}
+ #main>section:first-child .hero-collage-image{height:16.25rem!important}
+ #main>section:first-child .hero-content>div:last-child{margin-top:3.5rem!important}
 }
 </style>
 </head>
