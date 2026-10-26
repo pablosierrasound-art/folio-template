@@ -90,6 +90,17 @@ html[data-theme="dark"] .hero-collage-image::after{background:linear-gradient(90
   #main>section:first-child .hero-content>div:last-child .btn{font-size:.85rem}
 }
 </style>
+<style>
+/* Móvil: situar el collage junto al titular, no detrás de la entradilla */
+@media(max-width:767px){
+  #main>section:first-child{justify-content:flex-start!important;padding-top:8rem!important}
+  #main>section:first-child .hero-content{display:flex;flex-direction:column}
+  #main>section:first-child .hero-content h1{margin-top:clamp(6rem,22vw,9rem)!important;position:relative;z-index:2}
+  #main>section:first-child .hero-collage-image{top:clamp(12rem,42vw,16rem)!important;right:0!important;height:clamp(280px,82vw,420px)!important;width:100%!important;background-size:contain!important;background-position:right center!important;opacity:.32!important}
+  html[data-theme="dark"] #main>section:first-child .hero-collage-image{opacity:.2!important}
+  #main>section:first-child .hero-content>div:last-child{position:relative;z-index:2}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
