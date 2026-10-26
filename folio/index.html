@@ -232,6 +232,59 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
  #main>section:first-child .hero-content>div:last-child{margin-top:3.5rem!important}
 }
 </style>
+<style>
+/* Ajuste final de legibilidad y ritmo vertical de portada móvil */
+@media(max-width:767px){
+ #main>section:first-child{padding-top:5.1rem!important;padding-bottom:1.75rem!important}
+ #main>section:first-child .hero-content h1{
+   margin-top:1.1rem!important;
+   font-size:clamp(2.15rem,8.05vw,4.4rem)!important;
+   line-height:1.055!important;
+   letter-spacing:-.04em!important;
+ }
+ #main>section:first-child h1 .reveal-line{overflow:visible!important;padding-bottom:.04em!important}
+ #main>section:first-child h1 .reveal-line>span{white-space:nowrap!important}
+ #main>section:first-child .hero-collage-image{
+   top:5.8rem!important;
+   width:77%!important;
+   right:-1%!important;
+   height:16rem!important;
+   background-position:63% 42%!important;
+   opacity:.83!important;
+   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 57%,transparent 94%)!important;
+   mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 57%,transparent 94%)!important;
+ }
+ #main>section:first-child .hero-content>div:last-child{
+   margin-top:3.1rem!important;
+   padding-top:1.2rem!important;
+   gap:1.1rem!important;
+   background:transparent!important;
+ }
+ #main>section:first-child .hero-content>div:last-child::before{
+   inset:-.25rem -100vw -1rem!important;
+   background:linear-gradient(to bottom,transparent 0%,var(--color-bg) 8%,var(--color-bg) 100%)!important;
+ }
+ #main>section:first-child .hero-content>div:last-child p{
+   font-size:clamp(1rem,4.15vw,1.12rem)!important;
+   line-height:1.52!important;
+ }
+ #main>section:first-child .hero-content>div:last-child>div{
+   display:grid!important;
+   grid-template-columns:repeat(2,minmax(0,1fr))!important;
+   gap:.65rem!important;
+ }
+ #main>section:first-child .hero-content>div:last-child .btn{
+   width:100%;min-width:0;padding:.8rem .55rem!important;
+   font-size:clamp(.76rem,3.15vw,.93rem)!important;
+   text-align:center;white-space:nowrap;justify-content:center;
+ }
+}
+@media(max-width:380px){
+ #main>section:first-child .hero-content h1{font-size:7.85vw!important}
+ #main>section:first-child .hero-content>div:last-child>div{grid-template-columns:1fr!important}
+ #main>section:first-child .hero-content>div:last-child .btn{font-size:.9rem!important}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
