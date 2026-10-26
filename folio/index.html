@@ -116,30 +116,12 @@ html[data-theme="dark"] .hero-collage-image::after{background:linear-gradient(90
  .site-header .container-x>a:first-child{min-width:0;font-size:clamp(.9rem,4.3vw,1.125rem);white-space:nowrap}
 }
 </style>
+
 <style>
-/* Titular móvil: composición potente en tres líneas, sin recortes */
+/* Collage más visible en móvil, sin modificar el diseño ni el titular */
 @media(max-width:767px){
- #main>section:first-child h1{
-   font-size:clamp(2.65rem,11.3vw,5.4rem)!important;
-   letter-spacing:-.065em!important;
-   line-height:.98!important;
-   width:100%;max-width:100%;
- }
- #main>section:first-child h1 .reveal-line{overflow:visible!important;padding-bottom:.075em}
- #main>section:first-child h1 .reveal-line>span{white-space:nowrap}
- #main>section:first-child h1 .reveal-line:nth-child(2)>span{
-   display:block;
-   font-size:.78em;
-   letter-spacing:-.075em;
- }
- #main>section:first-child h1 .reveal-line:nth-child(3)>span{
-   display:block;
-   font-size:.94em;
- }
-}
-@media(max-width:380px){
- #main>section:first-child h1{font-size:11vw!important}
- #main>section:first-child h1 .reveal-line:nth-child(2)>span{font-size:.76em}
+ #main>section:first-child .hero-collage-image{opacity:.56!important}
+ html[data-theme="dark"] #main>section:first-child .hero-collage-image{opacity:.38!important}
 }
 </style>
 </head>
