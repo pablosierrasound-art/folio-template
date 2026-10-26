@@ -60,7 +60,7 @@ html[data-theme="dark"] .site-header.is-scrolled {background:rgba(11,11,12,.88)}
 </style>
 <style>
 /* Imagen editorial subida al repositorio, detrás del contenido */
-.hero-collage-image{background-image:url("assets/img/Paisaje%20industrial%20en%20collage%20editorial.png");background-repeat:no-repeat;background-size:cover;background-position:center right;top:7rem;right:-2vw;width:min(70vw,1100px);height:calc(100% - 7rem);opacity:.96;mix-blend-mode:multiply}
+.hero-collage-image{background-image:url("assets/img/file_000000006e78820a9aae616f850d657d.png");background-repeat:no-repeat;background-size:cover;background-position:center right;top:7rem;right:-2vw;width:min(70vw,1100px);height:calc(100% - 7rem);opacity:.96;mix-blend-mode:multiply}
 .hero-collage-image::after{background:linear-gradient(90deg,var(--color-bg) 0%,transparent 43%),linear-gradient(0deg,var(--color-bg),transparent 19%)}
 html[data-theme="dark"] .hero-collage-image{mix-blend-mode:screen;opacity:.32;filter:grayscale(1) contrast(1.4)}
 html[data-theme="dark"] .hero-collage-image::after{background:linear-gradient(90deg,var(--color-bg),transparent 54%),linear-gradient(0deg,var(--color-bg),transparent 25%)}
@@ -122,6 +122,16 @@ html[data-theme="dark"] .hero-collage-image::after{background:linear-gradient(90
 @media(max-width:767px){
  #main>section:first-child .hero-collage-image{opacity:.56!important}
  html[data-theme="dark"] #main>section:first-child .hero-collage-image{opacity:.38!important}
+}
+</style>
+<style>
+/* Nuevo collage editorial: se conserva su composición completa */
+.hero-collage-image{background-image:url("assets/img/file_000000006e78820a9aae616f850d657d.png")!important;background-size:contain!important;background-position:right center!important;mix-blend-mode:normal!important;opacity:1!important}
+html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/file_000000006e78820a9aae616f850d657d.png")!important;mix-blend-mode:screen!important;filter:grayscale(.65) contrast(1.1);opacity:.38!important}
+@media(max-width:900px){.hero-collage-image{opacity:.9!important}}
+@media(max-width:767px){
+ #main>section:first-child .hero-collage-image{background-size:contain!important;background-position:right center!important;opacity:.68!important}
+ html[data-theme="dark"] #main>section:first-child .hero-collage-image{opacity:.32!important}
 }
 </style>
 </head>
