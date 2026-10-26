@@ -513,7 +513,12 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 @keyframes concentrationPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.7}}
 @keyframes concentrationHalo{0%{transform:scale(.45);opacity:0}25%{opacity:.7}75%,100%{transform:scale(1.65);opacity:0}}
 @media(prefers-reduced-motion:reduce){.event-marquee-dot,.event-marquee-dot::after{animation:none}}
-</style></head>
+</style><style>
+@media(max-width:767px){
+.hero-content h1{font-size:clamp(3rem,10.95vw,5.5rem)!important;line-height:.93!important}
+}
+</style>
+</head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
