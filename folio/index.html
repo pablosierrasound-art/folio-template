@@ -536,7 +536,26 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 .plant-detail div strong{font-size:1.05rem;line-height:1.2;color:var(--color-ink)}
 .plant-detail div span{font-size:.95rem;line-height:1.5;color:var(--color-muted)}
 @media(max-width:767px){.plant-detail{padding:1.2rem .8rem 1.2rem 0}.plant-detail+.plant-detail{padding-left:1rem}.plant-detail-number{font-size:clamp(2.5rem,10vw,3.6rem)}}
-</style><style>.info-fact-nature .info-fact-art{color:#327c56!important}.info-fact-nature .info-fact-kicker{color:#327c56!important}.info-fact-nature>strong{font-size:clamp(1.65rem,4vw,3rem)!important;letter-spacing:-.05em!important}@media(max-width:767px){.info-fact-nature>strong{font-size:clamp(1.55rem,5.5vw,2.3rem)!important}}</style></head>
+</style><style>.info-fact-nature .info-fact-art{color:#327c56!important}.info-fact-nature .info-fact-kicker{color:#327c56!important}.info-fact-nature>strong{font-size:clamp(1.65rem,4vw,3rem)!important;letter-spacing:-.05em!important}@media(max-width:767px){.info-fact-nature>strong{font-size:clamp(1.55rem,5.5vw,2.3rem)!important}}</style><style>
+/* Entrada escalonada de las cifras al llegar a la sección */
+.plant-detail-number{display:inline-block;transform-origin:bottom left}
+.plant-detail-number.number-animate{animation:plantNumberReveal .9s cubic-bezier(.2,.8,.2,1) both}
+.plant-detail:nth-child(2) .plant-detail-number.number-animate{animation-delay:.18s}
+@keyframes plantNumberReveal{0%{opacity:0;transform:translateY(22px) scale(.82);filter:blur(5px)}65%{opacity:1;filter:blur(0)}85%{transform:translateY(-3px) scale(1.04)}100%{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){.plant-detail-number.number-animate{animation:none}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const nums=document.querySelectorAll('.plant-detail-number');
+ if(!nums.length)return;
+ if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const observer=new IntersectionObserver(function(entries){
+ entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('number-animate');observer.unobserve(entry.target)}});
+ },{threshold:.45});
+ nums.forEach(function(el){observer.observe(el)});
+});
+</script>
+</head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
