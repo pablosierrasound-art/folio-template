@@ -525,6 +525,17 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 .info-fact>strong small{font-size:.34em!important;letter-spacing:-.01em!important;font-weight:650!important}
 .info-fact>span:last-child{line-height:1.5!important}
 @media(max-width:767px){.info-fact>strong{font-size:clamp(1.65rem,6.4vw,2.7rem)!important}.info-fact .info-fact-kicker{font-size:.95rem!important}}
+</style><style>
+/* Lectura escalonada del detalle del proyecto */
+.plant-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--color-line);border-bottom:1px solid var(--color-line);margin:2rem 0 2.3rem}
+.plant-detail{display:flex;flex-direction:column;gap:.7rem;padding:1.5rem 1.3rem 1.5rem 0}
+.plant-detail+.plant-detail{border-left:1px solid var(--color-line);padding-left:1.5rem}
+.plant-detail-number{font-size:clamp(2.8rem,6vw,4.6rem);line-height:1;font-weight:800;letter-spacing:-.07em;color:var(--color-accent)}
+.plant-detail-number small{font-size:.45em;letter-spacing:-.02em}
+.plant-detail div{display:flex;flex-direction:column;gap:.4rem}
+.plant-detail div strong{font-size:1.05rem;line-height:1.2;color:var(--color-ink)}
+.plant-detail div span{font-size:.95rem;line-height:1.5;color:var(--color-muted)}
+@media(max-width:767px){.plant-detail{padding:1.2rem .8rem 1.2rem 0}.plant-detail+.plant-detail{padding-left:1rem}.plant-detail-number{font-size:clamp(2.5rem,10vw,3.6rem)}}
 </style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
@@ -543,8 +554,18 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
   <article class="info-fact info-fact-status reveal"><div class="info-fact-art"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 5 60 55H4L32 5Z" stroke-width="4"/><path d="M32 23v15" stroke-width="5"/><circle cx="32" cy="46" r="3" fill="currentColor" stroke="none"/></svg><span class="info-fact-index">03 / ACTÚA</span></div><span class="info-fact-kicker">¿Se puede evitar todavía?</span><strong>Aún no aprobada</strong><span>La autorización está pendiente. Puedes presentar alegaciones hasta el 25 de noviembre de 2026.</span></article>
  </div>
  <div class="info-explainer">
-  <div class="info-explainer-copy reveal"><p class="eyebrow">El proyecto, explicado</p><h3>Una incineradora <em class="section-serif text-accent">en Titulcia.</em></h3><p>El proyecto de PreZero combina la <strong>clasificación de materiales</strong> con la <strong>incineración de residuos para producir electricidad</strong>. La capacidad anunciada es de hasta <strong>300.000 toneladas al año</strong>, una magnitud comparable a la de la planta de Las Lomas, en Valdemingómez.</p><p>Según la información publicada sobre el proyecto, se prevén <strong>dos líneas de combustión y una chimenea de 70 metros</strong>. Antes de autorizarlo, es necesario conocer las emisiones estimadas, los controles previstos, el número de camiones y los posibles efectos sobre la población, los cultivos y los espacios naturales próximos.</p><a class="info-text-link" href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Consultar el expediente oficial <span aria-hidden="true">↗</span></a></div>
-  </div>
+ <div class="info-explainer-copy reveal">
+ <p class="eyebrow">EL PROYECTO, EN DETALLE</p>
+ <h3>¿Qué quieren <em class="section-serif text-accent">construir?</em></h3>
+ <p>La instalación que propone PreZero no solo separaría materiales para reciclar. También <strong>quemaría parte de los residuos para producir electricidad</strong>.</p>
+ <div class="plant-details" aria-label="Características de la instalación">
+ <div class="plant-detail"><span class="plant-detail-number">02</span><div><strong>Hornos de incineración</strong><span>Dos líneas en las que se quemarían residuos.</span></div></div>
+ <div class="plant-detail"><span class="plant-detail-number">70 <small>m</small></span><div><strong>Altura de la chimenea</strong><span>La altura prevista en la documentación del proyecto.</span></div></div>
+ </div>
+ <p>Es una instalación industrial de gran tamaño que se quiere situar junto a Titulcia. <strong>Antes de aprobarla, deben evaluarse sus emisiones, el tráfico de camiones y los efectos sobre el entorno.</strong></p>
+ <a class="info-text-link" href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Consultar el proyecto completo <span aria-hidden="true">↗</span></a>
+ </div>
+ </div>
  <p class="info-sources">Fuentes: <a href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Expediente ambiental de la Comunidad de Madrid</a> · <a href="https://fravm.org/medio-ambiente/contaminacion-atmosferica/amplio-rechazo-ciudadano-contra-la-incineradora-de-residuos-de-titulcia/" target="_blank" rel="noopener noreferrer">FRAVM</a>. Datos y estado del procedimiento consultados en octubre de 2026.</p>
 </div></section>
 <section id="impacto" class="concerns-section" aria-labelledby="impacto-title"><div class="container-x"><div class="concerns-section-heading"><p class="eyebrow">03 / Qué nos preocupa</p><h2 id="impacto-title">¿Cómo puede <em class="section-serif text-accent">afectarnos?</em></h2><p>Emisiones, tráfico pesado y posibles efectos sobre la vega: consulta los principales riesgos y qué debe aclarar la evaluación ambiental.</p></div> <div class="info-concerns"><div class="info-questions">
