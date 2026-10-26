@@ -498,6 +498,14 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 @media(max-width:767px){.event-marquee-top,.event-marquee-bottom{padding:.8rem 1.25rem}.event-marquee-viewport{padding:1.1rem 0}.event-marquee-unit{font-size:clamp(2.2rem,10vw,3.5rem)}.event-marquee-more{font-size:.65rem}.event-marquee-bottom{display:block}.event-marquee-bottom span{display:block;margin-top:.35rem}}
 @media(prefers-reduced-motion:reduce){.event-marquee-track{animation:none}.event-marquee-viewport{overflow-x:auto}}
 </style>
+<style>
+/* Jerarquía de portada: titular principal más protagonista en móvil */
+@media(max-width:767px){
+.hero-content h1{font-size:clamp(2.85rem,10.35vw,5.2rem)!important;line-height:.94!important;letter-spacing:-.055em!important}
+.hero-content h1 .reveal-line{overflow:visible!important}
+.hero-content h1 .reveal-line>span{white-space:nowrap}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
