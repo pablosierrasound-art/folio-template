@@ -313,6 +313,65 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
  #main>section:first-child .hero-content h1{font-size:8.3vw!important}
 }
 </style>
+<style>
+/* Sección informativa editorial */
+.info-story{padding:clamp(4.5rem,9vw,8rem) 0;background:var(--color-bg);color:var(--color-ink)}
+.info-story-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end;margin-bottom:2.5rem}
+.info-story-heading h2{font-size:clamp(3.2rem,7vw,7rem);font-weight:800;letter-spacing:-.065em;line-height:.94;margin-top:1.25rem}
+.info-story-heading h2 em{font-family:"Instrument Serif",serif;font-weight:400;letter-spacing:-.045em;color:var(--color-accent)}
+.info-story-heading>p{max-width:32rem;font-size:clamp(1.1rem,1.6vw,1.4rem);line-height:1.5;color:var(--color-muted)}
+.info-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--color-line);border:1px solid var(--color-line);margin:3rem 0 5rem}
+.info-fact{background:var(--color-bg);padding:clamp(1.3rem,3vw,2.5rem);min-height:13rem;display:flex;flex-direction:column;align-items:flex-start}
+.info-fact-icon{color:var(--color-accent);font-size:1.65rem;margin-bottom:auto;line-height:1}
+.info-fact strong{font-size:clamp(1.8rem,3.2vw,3.4rem);font-weight:800;letter-spacing:-.05em;line-height:1.1;margin-top:1.5rem}
+.info-fact strong small{font-size:.45em;letter-spacing:-.02em}
+.info-fact>span:last-child{color:var(--color-muted);font-size:.9rem;margin-top:.7rem;line-height:1.45}
+.info-explainer{display:grid;grid-template-columns:1fr .85fr;gap:clamp(2rem,7vw,7rem);align-items:center;margin-bottom:6rem}
+.info-explainer h3,.info-concerns h3,.info-action h3{font-size:clamp(2rem,4vw,4rem);line-height:1.03;letter-spacing:-.055em;font-weight:750;margin:1.2rem 0 1.5rem}
+.info-explainer-copy>p:not(.eyebrow){font-size:1.075rem;line-height:1.7;color:var(--color-muted);margin-bottom:1.25rem}
+.info-explainer-copy strong{color:var(--color-ink)}
+.info-text-link{display:inline-flex;gap:.7rem;align-items:center;border-bottom:2px solid var(--color-accent);padding:.35rem 0;font-weight:700;margin-top:1rem}
+.info-text-link:hover{color:var(--color-accent)}
+.info-process{border:1px solid var(--color-line);padding:clamp(1.4rem,3vw,2.5rem);background:color-mix(in srgb,var(--color-bg) 90%,var(--color-ink) 10%)}
+.info-process-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--color-muted);margin-bottom:2rem}
+.info-process-step{display:flex;gap:1.1rem;align-items:center;background:var(--color-bg);border:1px solid var(--color-line);padding:1.15rem}
+.info-process-symbol{display:grid;place-items:center;width:3rem;height:3rem;flex-shrink:0;border-radius:50%;background:color-mix(in srgb,var(--color-ink) 8%,transparent);font-size:1.45rem}
+.info-process-step b{display:block;font-size:1rem}.info-process-step div span{display:block;font-size:.82rem;color:var(--color-muted);margin-top:.3rem;line-height:1.4}
+.info-process-step-red{border-color:var(--color-accent)}.info-process-step-red .info-process-symbol{background:var(--color-accent);color:#fff}
+.info-process-line{text-align:center;font-size:1.4rem;color:var(--color-accent);line-height:1.65}
+.info-process-note{font-size:.75rem;color:var(--color-muted);margin-top:1.2rem}
+.info-concerns{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem);padding:4rem 0;border-top:1px solid var(--color-line)}
+.info-concerns-intro>p:last-child{font-size:1.05rem;color:var(--color-muted);line-height:1.65}
+.info-question{border-bottom:1px solid var(--color-line)}
+.info-question:first-child{border-top:1px solid var(--color-line)}
+.info-question summary{cursor:pointer;display:flex;align-items:center;gap:1rem;padding:1.35rem 0;list-style:none;font-weight:700;font-size:clamp(1rem,1.45vw,1.3rem)}
+.info-question summary::-webkit-details-marker{display:none}
+.info-q-icon{color:var(--color-accent);font-size:1.6rem;width:2rem;text-align:center;flex-shrink:0}
+.info-q-toggle{margin-left:auto;font-size:1.5rem;font-weight:400;transition:transform .2s}
+.info-question[open] .info-q-toggle{transform:rotate(45deg)}
+.info-question>p{padding:0 1.8rem 1.5rem 3rem;color:var(--color-muted);line-height:1.65;font-size:1rem}
+.info-question summary:hover{color:var(--color-accent)}
+.info-action{display:flex;justify-content:space-between;align-items:end;gap:2rem;background:var(--color-ink);color:var(--color-bg);padding:clamp(1.5rem,4vw,3.5rem);margin-top:2rem}
+.info-action-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--color-accent)}
+.info-action h3{margin:.8rem 0 1rem}.info-action p{max-width:36rem;line-height:1.65;opacity:.85}
+.info-action-links{display:flex;flex-wrap:wrap;gap:.75rem;flex-shrink:0}
+.info-action .btn-outline{border-color:color-mix(in srgb,var(--color-bg) 40%,transparent);color:var(--color-bg)}
+.info-sources{margin-top:1.2rem;font-size:.75rem;color:var(--color-muted);line-height:1.6}
+.info-sources a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.info-action{flex-direction:column;align-items:flex-start}.info-explainer{gap:2rem}}
+@media(max-width:767px){
+ .info-story{padding:4rem 0}.info-story-heading,.info-explainer,.info-concerns{grid-template-columns:1fr;gap:1.5rem}
+ .info-story-heading{margin-bottom:1.8rem}.info-story-heading h2{font-size:clamp(3rem,12vw,4.6rem)}
+ .info-facts{grid-template-columns:1fr 1fr;margin:2rem 0 3.5rem}
+ .info-fact{min-height:10rem;padding:1.1rem}.info-fact:last-child{grid-column:1/-1;min-height:8rem}
+ .info-fact strong{font-size:clamp(1.65rem,7vw,2.4rem)}
+ .info-explainer{margin-bottom:3rem}.info-concerns{padding:3rem 0}
+ .info-process{padding:1rem}.info-action{padding:1.5rem}
+ .info-action-links{width:100%;flex-direction:column;align-items:flex-start}
+ .info-action-links .btn{width:auto}
+}
+@media(prefers-reduced-motion:reduce){.info-q-toggle{transition:none}}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
@@ -321,7 +380,27 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 
   <main id="main">
 <section class="container-x relative isolate flex min-h-[92svh] flex-col justify-end pt-32 pb-14 md:pb-20"><div class="hero-collage hero-collage-image" aria-hidden="true"></div><div class="hero-content"><div class="flex flex-wrap items-center gap-x-6 gap-y-2 reveal"><p class="eyebrow">Movilización ciudadana · Titulcia, Madrid</p><p class="eyebrow flex items-center gap-2"><span class="status-dot"></span> Nuestro entorno, nuestro futuro</p></div><h1 class="mt-8 font-semibold leading-[0.9] tracking-[-0.055em]" style="font-size:clamp(2.75rem,8.2vw,8.6rem);font-weight:800;letter-spacing:-0.025em"><span class="reveal-line"><span><span class="text-accent">NO</span> A LA</span></span><span class="reveal-line"><span style="--d:120ms">INCINERADORA</span></span><span class="reveal-line"><span style="--d:240ms">EN TITULCIA<span class="text-accent">.</span></span></span></h1><div class="mt-14 grid gap-10 border-t border-line pt-8 md:grid-cols-12 md:items-end reveal" style="--d:300ms"><p class="text-lg leading-relaxed text-muted md:col-span-6 md:text-xl">La empresa <strong class="text-accent">PreZero</strong> proyecta construir una incineradora de residuos a solo 1,5 km de Titulcia. <span class="text-ink">Nos oponemos a su construcción por los posibles riesgos para la salud, el aire y nuestro entorno natural. <strong>Ayúdanos a conseguirlo.</strong></span></p><div class="flex flex-wrap gap-3 md:col-span-5 md:col-start-8 md:justify-end"><a href="#participa" class="btn btn-primary">Hazte escuchar &rarr;</a><a href="#informacion" class="btn btn-outline">Conoce la información</a></div></div></div></section>
-<section id="informacion" class="container-x py-20 md:py-28" aria-labelledby="info-title"><div class="grid gap-10 md:grid-cols-12"><div class="md:col-span-4"><p class="eyebrow reveal">01 / Infórmate</p><h2 id="info-title" class="mt-4 text-3xl font-semibold tracking-tight md:text-5xl reveal">¿Qué está pasando?</h2></div><div class="md:col-span-8"><p class="text-[clamp(1.5rem,3vw,2.7rem)] leading-tight tracking-tight reveal">Existe preocupación vecinal ante el proyecto de una instalación de tratamiento de residuos en Titulcia y sus posibles consecuencias para el municipio y la comarca.</p><p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted reveal">Queremos conocer con claridad qué se propone, qué tecnologías se utilizarían, qué impactos se han evaluado y cómo se garantizaría la protección de la salud y el medio ambiente. Esta página reúne los principales motivos de preocupación y las vías para participar.</p></div></div></section>
+<section id="informacion" class="info-story" aria-labelledby="info-title">
+<div class="container-x">
+ <div class="info-story-heading reveal"><div><p class="eyebrow">01 / Entiende el proyecto</p><h2 id="info-title">¿Qué está <em>pasando?</em></h2></div><p>Una instalación industrial de gran escala podría cambiar el futuro de Titulcia y de toda la comarca. Estos son los datos, las dudas y el estado real del proyecto.</p></div>
+ <div class="info-facts" aria-label="Datos principales del proyecto">
+  <article class="info-fact reveal"><span class="info-fact-icon" aria-hidden="true">▥</span><strong>300.000 <small>t/año</small></strong><span>Capacidad de incineración anunciada</span></article>
+  <article class="info-fact reveal"><span class="info-fact-icon" aria-hidden="true">⌖</span><strong>M-404 <small>km 49</small></strong><span>Ubicación prevista en Titulcia</span></article>
+  <article class="info-fact reveal"><span class="info-fact-icon" aria-hidden="true">◷</span><strong>En trámite</strong><span>No cuenta todavía con autorización ambiental definitiva</span></article>
+ </div>
+ <div class="info-explainer">
+  <div class="info-explainer-copy reveal"><p class="eyebrow">El proyecto, explicado</p><h3>No es solo una planta de reciclaje.</h3><p>PreZero Gestión de Residuos solicita autorización para un centro de <strong>clasificación y valorización energética de residuos no peligrosos</strong>. Además de separar materiales, el proyecto contempla <strong>quemar residuos para producir energía</strong>.</p><p>La instalación se plantea en el entorno de Titulcia, junto a una comarca de vegas, núcleos habitados y espacios de valor natural. La preocupación ciudadana se centra en las emisiones, el transporte de residuos y sus posibles efectos acumulados.</p><a class="info-text-link" href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Consultar el expediente oficial <span aria-hidden="true">↗</span></a></div>
+  <div class="info-process reveal" aria-label="Esquema simplificado del proceso"><div class="info-process-label">Cómo funcionaría</div><div class="info-process-step"><span class="info-process-symbol" aria-hidden="true">▤</span><div><b>01 · Llegada de residuos</b><span>Transporte y recepción en la instalación</span></div></div><div class="info-process-line" aria-hidden="true">↓</div><div class="info-process-step"><span class="info-process-symbol" aria-hidden="true">▦</span><div><b>02 · Clasificación</b><span>Separación y preparación de materiales</span></div></div><div class="info-process-line" aria-hidden="true">↓</div><div class="info-process-step info-process-step-red"><span class="info-process-symbol" aria-hidden="true">♨</span><div><b>03 · Valorización energética</b><span>Combustión de residuos y aprovechamiento de energía</span></div></div><p class="info-process-note">Esquema divulgativo, no un plano técnico de la instalación.</p></div>
+ </div>
+ <div class="info-concerns"><div class="info-concerns-intro reveal"><p class="eyebrow">Por qué nos preocupa</p><h3>Preguntas que necesitan respuestas.</h3><p>La evaluación ambiental debe analizar los efectos concretos del proyecto. Estos son algunos de los aspectos que la ciudadanía reclama aclarar.</p></div><div class="info-questions">
+  <details class="info-question reveal" open><summary><span class="info-q-icon" aria-hidden="true">≋</span><span>¿Qué pasaría con la calidad del aire?</span><span class="info-q-toggle" aria-hidden="true">+</span></summary><p>La combustión exige sistemas de depuración y controles de emisiones. Es esencial examinar los contaminantes previstos, su dispersión y los posibles efectos sobre la población y el entorno.</p></details>
+  <details class="info-question reveal"><summary><span class="info-q-icon" aria-hidden="true">⇢</span><span>¿Cuánto tráfico de camiones generaría?</span><span class="info-q-toggle" aria-hidden="true">+</span></summary><p>El transporte de residuos puede incrementar el tránsito de vehículos pesados, el ruido y la presión sobre los accesos. Deben estudiarse las rutas, los horarios y el impacto sobre las carreteras de la zona.</p></details>
+  <details class="info-question reveal"><summary><span class="info-q-icon" aria-hidden="true">❀</span><span>¿Cómo afectaría a la vega y al paisaje?</span><span class="info-q-toggle" aria-hidden="true">+</span></summary><p>La cercanía a los entornos del Jarama y el Tajuña hace especialmente importante evaluar posibles afecciones sobre la biodiversidad, los suelos, el agua y las actividades agrícolas.</p></details>
+  <details class="info-question reveal"><summary><span class="info-q-icon" aria-hidden="true">◎</span><span>¿Está aprobada la construcción?</span><span class="info-q-toggle" aria-hidden="true">+</span></summary><p>No. La solicitud de autorización ambiental integrada y el estudio de impacto ambiental se encuentran en tramitación. La publicación del expediente no equivale a una autorización definitiva.</p></details>
+ </div></div>
+ <div class="info-action reveal"><div><span class="info-action-tag">Participación ciudadana</span><h3>Tu opinión todavía cuenta.</h3><p>El expediente oficial indica un plazo de alegaciones del <strong>13 de octubre al 25 de noviembre de 2026</strong>. Consulta la documentación y descubre cómo participar.</p></div><div class="info-action-links"><a class="btn btn-primary" href="#participa">Hazte escuchar →</a><a class="btn btn-outline" href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Ver documentación ↗</a></div></div>
+ <p class="info-sources">Fuentes: <a href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Expediente ambiental de la Comunidad de Madrid</a> · <a href="https://fravm.org/medio-ambiente/contaminacion-atmosferica/amplio-rechazo-ciudadano-contra-la-incineradora-de-residuos-de-titulcia/" target="_blank" rel="noopener noreferrer">FRAVM</a>. Datos y estado del procedimiento consultados en octubre de 2026.</p>
+</div></section>
 <section id="impacto" class="container-x py-20 md:py-28" aria-labelledby="impacto-title"><div class="mb-12 border-b border-line pb-6"><p class="eyebrow reveal">02 / Lo que está en juego</p><h2 id="impacto-title" class="mt-4 text-3xl font-semibold tracking-tight md:text-5xl reveal">Defender Titulcia es defender nuestro entorno.</h2></div><div class="grid gap-x-8 gap-y-14 md:grid-cols-2"><article class="reveal border-t border-line pt-6"><p class="eyebrow">01 / Aire</p><h3 class="mt-4 text-3xl font-semibold tracking-tight">Calidad del aire</h3><p class="mt-3 text-muted text-lg">Pedimos garantías y evaluaciones rigurosas sobre las posibles emisiones y sus efectos en la población.</p></article><article class="reveal border-t border-line pt-6"><p class="eyebrow">02 / Movilidad</p><h3 class="mt-4 text-3xl font-semibold tracking-tight">Tráfico de camiones</h3><p class="mt-3 text-muted text-lg">Nos preocupa el posible incremento de vehículos pesados, ruido y tránsito en las carreteras del entorno.</p></article><article class="reveal border-t border-line pt-6"><p class="eyebrow">03 / Naturaleza</p><h3 class="mt-4 text-3xl font-semibold tracking-tight">Vega y espacios naturales</h3><p class="mt-3 text-muted text-lg">Queremos preservar el paisaje, la biodiversidad y los espacios naturales vinculados al entorno del Jarama y el Tajuña.</p></article><article class="reveal border-t border-line pt-6"><p class="eyebrow">04 / Territorio</p><h3 class="mt-4 text-3xl font-semibold tracking-tight">Agricultura y vida local</h3><p class="mt-3 text-muted text-lg">Defendemos las actividades agrícolas, el bienestar vecinal y un desarrollo compatible con la identidad de la comarca.</p></article></div></section>
 <section id="participa" class="container-x py-20 md:py-28" aria-labelledby="participa-title"><p class="eyebrow reveal">03 / Participa</p><h2 id="participa-title" class="mt-4 max-w-5xl text-[clamp(2.8rem,7vw,7rem)] font-semibold leading-[0.95] tracking-tight reveal">Tu voz también cuenta<span class="serif-accent text-accent">.</span></h2><p class="mt-8 max-w-2xl text-lg text-muted reveal">Infórmate, comparte esta iniciativa y participa en los canales oficiales de consulta y alegaciones que correspondan. Una comunidad informada puede exigir respuestas.</p><div class="mt-10 flex flex-wrap gap-3 reveal"><a class="btn btn-primary" href="https://www.comunidad.madrid/" target="_blank" rel="noopener noreferrer">Consultar información institucional &rarr;</a><a class="btn btn-outline" href="https://www.change.org/" target="_blank" rel="noopener noreferrer">Buscar iniciativas ciudadanas &rarr;</a></div><p class="mt-5 text-sm text-muted">Enlaces generales provisionales: se sustituirán por los documentos y formularios específicos verificados.</p></section>
 </main>
