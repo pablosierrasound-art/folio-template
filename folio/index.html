@@ -101,6 +101,21 @@ html[data-theme="dark"] .hero-collage-image::after{background:linear-gradient(90
   #main>section:first-child .hero-content>div:last-child{position:relative;z-index:2}
 }
 </style>
+<style>
+/* Estabilidad de layout en móviles sin desactivar el zoom accesible */
+@media(max-width:767px){
+ html{width:100%;max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+ body{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+ main,header,footer,section{max-width:100%;min-width:0}
+ #main>section:first-child{width:100%;max-width:100%;overflow:hidden;isolation:isolate}
+ #main>section:first-child .hero-content{max-width:100%;min-width:0}
+ #main>section:first-child .hero-collage-image{max-width:100%;overflow:hidden}
+ #main>section:first-child h1{max-width:100%;min-width:0}
+ #main>section:first-child h1 .reveal-line{max-width:100%}
+ .site-header .container-x{max-width:100%;min-width:0}
+ .site-header .container-x>a:first-child{min-width:0;font-size:clamp(.9rem,4.3vw,1.125rem);white-space:nowrap}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
