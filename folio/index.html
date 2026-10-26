@@ -134,6 +134,35 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
  html[data-theme="dark"] #main>section:first-child .hero-collage-image{opacity:.32!important}
 }
 </style>
+<style>
+/* Collage móvil: imagen integrada tras el titular, sin bandas ni cortes */
+@media(max-width:767px){
+ #main>section:first-child .hero-collage-image{
+   top:clamp(16rem,43vw + 9rem,21rem)!important;
+   left:0!important;
+   right:0!important;
+   width:100%!important;
+   height:clamp(19rem,80vw,27rem)!important;
+   background-size:cover!important;
+   background-position:65% center!important;
+   opacity:.78!important;
+   mix-blend-mode:normal!important;
+   filter:none!important;
+   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 16%,#000 74%,transparent 100%);
+   mask-image:linear-gradient(to bottom,transparent 0%,#000 16%,#000 74%,transparent 100%);
+   z-index:0!important;
+ }
+ #main>section:first-child .hero-collage-image::after{
+   background:linear-gradient(to right,var(--color-bg) 0%,transparent 62%)!important;
+ }
+ html[data-theme="dark"] #main>section:first-child .hero-collage-image{
+   opacity:.32!important;
+   mix-blend-mode:screen!important;
+   filter:grayscale(.65) contrast(1.1)!important;
+ }
+ #main>section:first-child .hero-content{position:relative;z-index:1}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
