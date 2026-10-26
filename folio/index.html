@@ -506,7 +506,14 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 .hero-content h1 .reveal-line>span{white-space:nowrap}
 }
 </style>
-</head>
+<style>
+/* Pulso lento del indicador de próxima concentración */
+.event-marquee-dot{position:relative;flex:none;animation:concentrationPulse 2.8s ease-in-out infinite;transform-origin:center}
+.event-marquee-dot::after{content:"";position:absolute;inset:-5px;border:1px solid rgba(255,255,255,.75);border-radius:50%;animation:concentrationHalo 2.8s ease-out infinite}
+@keyframes concentrationPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.7}}
+@keyframes concentrationHalo{0%{transform:scale(.45);opacity:0}25%{opacity:.7}75%,100%{transform:scale(1.65);opacity:0}}
+@media(prefers-reduced-motion:reduce){.event-marquee-dot,.event-marquee-dot::after{animation:none}}
+</style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
