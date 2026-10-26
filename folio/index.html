@@ -399,6 +399,31 @@ html[data-theme="dark"] .hero-collage-image{background-image:url("assets/img/fil
 }
 @media(prefers-reduced-motion:reduce){.info-story .info-fact-art svg{transition:none}}
 </style>
+<style>
+/* Tarjetas de datos: mismo lenguaje minimalista que el hero */
+.info-story .info-facts{gap:0!important;background:transparent!important;border-top:1px solid var(--color-line)!important;border-bottom:1px solid var(--color-line)!important}
+.info-story .info-fact{background:var(--color-bg)!important;border:0!important;border-right:1px solid var(--color-line)!important;border-radius:0!important}
+.info-story .info-fact:last-child{border-right:0!important}
+.info-story .info-fact-art{height:8.5rem!important;background:transparent!important;color:var(--color-accent)!important;justify-content:flex-start!important;padding-left:1.35rem!important}
+.info-story .info-fact:nth-child(2) .info-fact-art,.info-story .info-fact:nth-child(3) .info-fact-art{background:transparent!important;color:var(--color-accent)!important}
+.info-story .info-fact-art::before{display:none!important}
+.info-story .info-fact-art svg{width:4.5rem!important;height:4.5rem!important;filter:none!important;stroke-width:2!important}
+.info-story .info-fact:hover .info-fact-art svg{transform:none!important}
+.info-story .info-fact-index{color:var(--color-muted)!important;left:auto!important;right:1.35rem!important;bottom:1.3rem!important;font-size:.6rem!important;letter-spacing:.1em!important}
+.info-story .info-fact-kicker{font-size:.66rem!important;letter-spacing:.12em!important;margin-top:.5rem!important}
+.info-story .info-fact strong{font-weight:800!important}
+@media(max-width:767px){
+ .info-story .info-facts{border-top:0!important;border-bottom:0!important;gap:0!important}
+ .info-story .info-fact,.info-story .info-fact:last-child{grid-template-columns:30% 1fr!important;border:0!important;border-top:1px solid var(--color-line)!important;min-height:9rem!important}
+ .info-story .info-fact:last-child{border-bottom:1px solid var(--color-line)!important}
+ .info-story .info-fact-art{height:100%!important;min-height:9rem!important;align-items:center!important;justify-content:center!important;padding:0!important;border-right:1px solid var(--color-line)!important}
+ .info-story .info-fact-art svg{width:3.5rem!important;height:3.5rem!important}
+ .info-story .info-fact-index{left:0!important;right:0!important;bottom:.7rem!important;text-align:center!important;font-size:.48rem!important}
+ .info-story .info-fact-kicker{margin:1.15rem 1rem .5rem!important}
+ .info-story .info-fact strong{margin:0 1rem .55rem!important}
+ .info-story .info-fact>span:last-child{margin:0 1rem 1.15rem!important}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
