@@ -649,6 +649,15 @@ html[data-theme="dark"] .site-header{background-color:#111113!important}
 .site-header .header-dynamic-title{visibility:hidden!important;opacity:0!important;transform:translate3d(0,3px,0)!important;transition:opacity .32s ease,transform .32s ease,visibility 0s linear .32s!important}
 .site-header.is-scrolled .header-dynamic-title{visibility:visible!important;opacity:1!important;transform:translate3d(0,0,0)!important;transition:opacity .36s ease .06s,transform .36s ease .06s,visibility 0s!important}
 @media(prefers-reduced-motion:reduce){.site-header .header-dynamic-title,.site-header.is-scrolled .header-dynamic-title{transition:none!important;transform:none!important}}
+</style><style>
+/* Menú móvil siempre anclado al viewport, por encima de cualquier sección */
+@media(max-width:767px){
+.site-header{z-index:9999!important}
+#mobile-menu{position:fixed!important;top:80px!important;left:0!important;right:0!important;bottom:0!important;height:calc(100dvh - 80px)!important;z-index:9998!important;background:var(--color-bg,#f7f6f2)!important;overflow-y:auto!important;overscroll-behavior:contain;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);transition:opacity .24s ease,transform .24s ease,visibility .24s!important}
+#mobile-menu.is-open:not([hidden]){display:block!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0)!important}
+#mobile-menu nav,#mobile-menu a{position:relative;z-index:1}
+}
+@media(prefers-reduced-motion:reduce){#mobile-menu{transition:none!important;transform:none!important}}
 </style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
