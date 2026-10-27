@@ -670,6 +670,15 @@ html[data-theme="dark"] .site-header{background-color:#111113!important}
 .hero-deadline-sticker .sticker-date strong{color:#d83b28}
 @media(max-width:767px){.hero-deadline-sticker{position:relative;right:auto;top:auto;width:max-content;max-width:88%;margin:1.35rem 0 -1.6rem auto;padding:.75rem .9rem;gap:.3rem;transform:rotate(3deg);box-shadow:3px 4px 0 rgba(23,23,23,.13)}.hero-deadline-sticker .sticker-label{font-size:.5rem}.hero-deadline-sticker .sticker-message{font-size:1.13rem}.hero-deadline-sticker .sticker-date{font-size:.66rem}}
 @media(prefers-reduced-motion:reduce){.hero-deadline-sticker{transition:none}}
+</style><style>
+/* Sticker superpuesto al copy de portada, no como bloque independiente */
+.hero-content .hero-deadline-sticker{position:absolute!important;top:auto!important;right:clamp(.5rem,3vw,2rem)!important;bottom:clamp(8.5rem,15vw,13rem)!important;margin:0!important;z-index:5!important;transform:rotate(5deg)!important}
+@media(max-width:767px){
+.hero-content .hero-deadline-sticker{position:absolute!important;top:auto!important;right:.35rem!important;bottom:clamp(12rem,43vw,17rem)!important;width:clamp(136px,35vw,175px)!important;max-width:none!important;padding:.7rem .75rem!important;transform:rotate(5deg)!important;box-shadow:3px 4px 0 rgba(23,23,23,.15)!important}
+.hero-content .hero-deadline-sticker .sticker-message{font-size:1.03rem!important}
+.hero-content .hero-deadline-sticker .sticker-label{font-size:.46rem!important}
+.hero-content .hero-deadline-sticker .sticker-date{font-size:.59rem!important}
+}
 </style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
