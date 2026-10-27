@@ -568,7 +568,41 @@ document.addEventListener('DOMContentLoaded',function(){
 </style>
 <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
 <script>document.addEventListener('DOMContentLoaded',function(){if(window.lucide)window.lucide.createIcons()});</script>
-</head>
+<style>
+/* Tarjeta reversible del parque: la foto sustituye al contenido al girar */
+.info-fact-flip{display:block!important;position:relative;perspective:1200px;isolation:isolate;padding:0!important;min-height:360px}
+.nature-flip-inner{position:relative;width:100%;height:100%;min-height:360px;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.22,.72,.19,1)}
+.info-fact-flip.is-flipped .nature-flip-inner{transform:rotateY(180deg)}
+.nature-flip-front,.nature-flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.nature-flip-front{display:grid;grid-template-columns:30% 1fr;align-content:center;column-gap:0;padding:1.1rem 1rem 3.4rem 0}
+.nature-flip-front>.info-fact-art{grid-row:1/5;align-self:stretch;min-height:210px}
+.nature-flip-front>.info-fact-kicker,.nature-flip-front>strong,.nature-flip-front>span:last-of-type{grid-column:2}
+.nature-flip-button{display:inline-flex;align-items:center;gap:.5rem;justify-content:center;border:1px solid currentColor;border-radius:100px;padding:.5rem .85rem;font-size:.82rem;font-weight:700;line-height:1.2;cursor:pointer;color:#327c56;background:transparent}
+.nature-flip-button svg{width:1rem;height:1rem}
+.nature-flip-front>.nature-flip-button{position:absolute;bottom:.75rem;right:1rem}
+.nature-flip-back{transform:rotateY(180deg);overflow:hidden;background:#132a22;color:white}
+.nature-flip-back img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nature-flip-back:after{content:"";position:absolute;inset:25% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));pointer-events:none}
+.nature-photo-caption{position:absolute;z-index:1;bottom:4rem;left:1.3rem;right:1.3rem;display:flex;flex-direction:column;gap:.35rem}
+.nature-photo-caption strong{font-size:clamp(1.3rem,3vw,2.1rem);line-height:1.1;letter-spacing:-.035em}
+.nature-photo-caption span{font-size:.75rem;line-height:1.4;color:#eee}
+.nature-flip-return{position:absolute;z-index:2;right:1rem;bottom:.75rem;background:rgba(255,255,255,.93);color:#183f30;border:0}
+@media(max-width:767px){.info-fact-flip,.nature-flip-inner{min-height:350px}.nature-flip-front{grid-template-columns:30% 1fr;padding-right:.7rem}.nature-flip-front>.info-fact-art{min-height:230px}.nature-flip-front>.nature-flip-button{right:.7rem}}
+@media(prefers-reduced-motion:reduce){.nature-flip-inner{transition:none}}
+</style><script>
+document.addEventListener('DOMContentLoaded',function(){
+ const card=document.getElementById('parque-flip');if(!card)return;
+ const buttons=card.querySelectorAll('.nature-flip-button');
+ const back=card.querySelector('.nature-flip-back');
+ buttons.forEach(function(btn){btn.addEventListener('click',function(){
+ const flipped=card.classList.toggle('is-flipped');
+ buttons[0].setAttribute('aria-expanded',String(flipped));
+ back.setAttribute('aria-hidden',String(!flipped));
+ buttons[0].tabIndex=flipped?-1:0;
+ buttons[1].tabIndex=flipped?0:-1;
+ });});
+});
+</script></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
@@ -583,7 +617,11 @@ document.addEventListener('DOMContentLoaded',function(){
  <div class="info-facts" aria-label="Datos principales del proyecto">
   <article class="info-fact reveal"><div class="info-fact-art"><i data-lucide="factory" aria-hidden="true"></i><span class="info-fact-index">01 / TAMAÑO</span></div><span class="info-fact-kicker">¿Cuánta basura quemaría?</span><strong>300.000 <small>toneladas/año</small></strong><span>Esa es la cantidad máxima de residuos que la planta podría tratar al año, según el proyecto.</span></article>
   <article class="info-fact reveal"><div class="info-fact-art"><i data-lucide="truck" aria-hidden="true"></i><span class="info-fact-index">02 / CERCANÍA</span></div><span class="info-fact-kicker">¿Dónde la quieren construir?</span><strong>1,5 <small>km del pueblo</small></strong><span>Junto a la carretera M-404, a aproximadamente kilómetro y medio del casco urbano de Titulcia.</span></article>
-  <article class="info-fact info-fact-nature reveal"><div class="info-fact-art"><i data-lucide="bird" aria-hidden="true"></i><span class="info-fact-index">03 / NATURALEZA</span></div><span class="info-fact-kicker">¿Qué espacio natural está en riesgo?</span><strong>Parque del Sureste</strong><span>La planta se proyecta a unos 800 metros del Parque Regional del Sureste y muy cerca de zonas protegidas para las aves y otros animales.</span></article>
+  <article class="info-fact info-fact-nature info-fact-flip reveal" id="parque-flip">
+<div class="nature-flip-inner">
+<div class="nature-flip-front"><div class="info-fact-art"><i data-lucide="bird" aria-hidden="true"></i><span class="info-fact-index">03 / NATURALEZA</span></div><span class="info-fact-kicker">¿Qué espacio natural está en riesgo?</span><strong>Parque del Sureste</strong><span>La planta se proyecta a unos 800 metros del Parque Regional del Sureste y muy cerca de zonas protegidas para las aves y otros animales.</span><button type="button" class="nature-flip-button" aria-label="Ver fotografía del Parque Regional del Sureste" aria-expanded="false" aria-controls="parque-foto"><i data-lucide="rotate-3d" aria-hidden="true"></i><span>Ver el parque</span></button></div>
+<div class="nature-flip-back" id="parque-foto" aria-hidden="true"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Parque_Regional_del_Sureste_-_Lagunas_de_Rivas.JPG?width=1200" alt="Laguna del Soto de las Juntas, en el Parque Regional del Sureste, fotografiada por Balles2601"/><div class="nature-photo-caption"><strong>Parque Regional del Sureste</strong><span>Laguna del Soto de las Juntas · Foto: Balles2601 / Wikimedia Commons, CC BY-SA</span></div><button type="button" class="nature-flip-button nature-flip-return" aria-label="Volver a la información sobre el parque" tabindex="-1"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Volver</span></button></div>
+</div></article>
   <article class="info-fact info-fact-status reveal"><div class="info-fact-art"><i data-lucide="circle-alert" aria-hidden="true"></i><span class="info-fact-index">04 / ACTÚA</span></div><span class="info-fact-kicker">¿Se puede evitar todavía?</span><strong>Aún no aprobada</strong><span>La autorización está pendiente. Puedes presentar alegaciones hasta el 25 de noviembre de 2026.</span></article>
  </div>
  <div class="info-explainer">
