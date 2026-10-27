@@ -810,6 +810,41 @@ z-index:4!important;
   }
 }
 </style>
+<style>
+/* Desktop-only: four consistent fact cards, no orphaned fourth card or squeezed nature flip. */
+@media(min-width:768px){
+ .info-story .info-facts{
+   display:grid!important;
+   grid-template-columns:repeat(4,minmax(0,1fr))!important;
+   align-items:stretch!important;
+ }
+ .info-story .info-facts>.info-fact{
+   grid-column:auto!important;
+   grid-row:auto!important;
+   min-width:0!important;
+   min-height:clamp(340px,35vw,470px)!important;
+   height:100%!important;
+   display:flex!important;
+   flex-direction:column!important;
+   overflow:hidden!important;
+ }
+ .info-story .info-facts>.info-fact:last-child{
+   border-right:0!important;
+ }
+ .info-story .info-fact-art{flex:0 0 auto!important}
+ .info-story .info-fact strong{font-size:clamp(1.45rem,2.25vw,2.6rem)!important;overflow-wrap:break-word!important}
+ .info-story .info-fact strong small{font-size:.42em!important}
+ .info-story .info-fact-kicker{overflow-wrap:break-word!important}
+ .info-story .info-fact-nature .nature-flip-inner{
+   width:100%!important;height:100%!important;min-height:inherit!important;
+ }
+ .info-story .info-fact-nature .nature-flip-front{
+   box-sizing:border-box!important;width:100%!important;height:100%!important;
+   min-height:inherit!important;
+ }
+ .info-story .info-fact-nature .nature-flip-front strong{font-size:clamp(1.45rem,2.25vw,2.6rem)!important}
+}
+</style>
 </head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
