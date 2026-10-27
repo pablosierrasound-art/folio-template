@@ -636,11 +636,20 @@ document.addEventListener('DOMContentLoaded',function(){
  const hero=document.querySelector('.hero-content');
  if(!header)return;
  let ticking=false;
- function update(){const bottom=hero?hero.getBoundingClientRect().bottom:window.innerHeight*.7;header.classList.toggle('is-scrolled',bottom<90);ticking=false}
+ function update(){const bottom=hero?hero.getBoundingClientRect().bottom:window.innerHeight*.7;const currently=header.classList.contains('is-scrolled');header.classList.toggle('is-scrolled',bottom<(currently?150:65));ticking=false}
  function schedule(){if(!ticking){ticking=true;requestAnimationFrame(update)}}
  update();window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);
 });
-</script></head>
+</script><style>
+/* Transición de cabecera: sin elementos flotando sobre el hero */
+html[data-theme="light"] .site-header,html:not([data-theme="dark"]) .site-header{background-color:#f7f6f2!important}
+html[data-theme="dark"] .site-header{background-color:#111113!important}
+.site-header{isolation:isolate;box-shadow:none!important;transition:background-color .28s ease,border-color .28s ease,box-shadow .28s ease!important}
+.site-header.is-scrolled{box-shadow:0 3px 14px rgba(0,0,0,.045)!important}
+.site-header .header-dynamic-title{visibility:hidden!important;opacity:0!important;transform:translate3d(0,3px,0)!important;transition:opacity .32s ease,transform .32s ease,visibility 0s linear .32s!important}
+.site-header.is-scrolled .header-dynamic-title{visibility:visible!important;opacity:1!important;transform:translate3d(0,0,0)!important;transition:opacity .36s ease .06s,transform .36s ease .06s,visibility 0s!important}
+@media(prefers-reduced-motion:reduce){.site-header .header-dynamic-title,.site-header.is-scrolled .header-dynamic-title{transition:none!important;transform:none!important}}
+</style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
