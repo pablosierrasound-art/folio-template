@@ -765,6 +765,11 @@ z-index:4!important;
 .allegations-guide-note strong{color:var(--color-ink)}
 @media(max-width:767px){.allegations-guide{margin-left:-.4rem;margin-right:-.4rem;padding:1.3rem}.allegations-steps li{grid-template-columns:2rem minmax(0,1fr);gap:.7rem}.allegations-guide-actions .btn{width:100%;justify-content:center;text-align:center}}
 .event-marquee[hidden],.hero-deadline-sticker[hidden]{display:none!important}
+</style><style>
+/* Mejorar la presencia visual de la fotografía en la tarjeta giratoria */
+.nature-flip-back img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 46%!important;filter:none!important;opacity:1!important}
+.nature-flip-back:before{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.64));pointer-events:none;z-index:1}
+.nature-photo-caption,.nature-flip-return{z-index:2;position:relative}
 </style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
@@ -783,7 +788,7 @@ z-index:4!important;
   <article class="info-fact info-fact-nature info-fact-flip reveal" id="parque-flip">
 <div class="nature-flip-inner">
 <div class="nature-flip-front"><div class="info-fact-art"><i data-lucide="bird" aria-hidden="true"></i><span class="info-fact-index">03 / NATURALEZA</span></div><span class="info-fact-kicker">¿Qué espacio natural hay cerca?</span><strong>Parque del Sureste</strong><span class="nature-flip-description">El entorno del Parque Regional del Sureste alberga riberas, aves y otros hábitats valiosos. Es importante evaluar los posibles efectos del proyecto.</span><button type="button" class="nature-flip-button" aria-label="Ver fotografía del Parque Regional del Sureste" aria-expanded="false" aria-controls="parque-foto"><i data-lucide="rotate-3d" aria-hidden="true"></i><span>Ver el parque</span></button></div>
-<div class="nature-flip-back" id="parque-foto" aria-hidden="true"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jarama_Titulcia.jpg?width=2200" alt="Río Jarama a su paso por Titulcia, junto al entorno del Soto de Bayona"/><div class="nature-photo-caption"><strong>Parque Regional del Sureste</strong><span>Río Jarama en Titulcia · Wikimedia Commons</span></div><button type="button" class="nature-flip-button nature-flip-return" aria-label="Volver a la información sobre el parque" tabindex="-1"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Volver</span></button></div>
+<div class="nature-flip-back" id="parque-foto" aria-hidden="true"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Titulcia%20-%20001%20%2830601927562%29.jpg?width=1800" alt="Fotografía del paisaje de Titulcia, en el sureste de Madrid"/><div class="nature-photo-caption"><strong>Parque Regional del Sureste</strong><span>Titulcia · Fotografía de Wikimedia Commons</span></div><button type="button" class="nature-flip-button nature-flip-return" aria-label="Volver a la información sobre el parque" tabindex="-1"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Volver</span></button></div>
 </div></article>
   <article class="info-fact info-fact-status reveal"><div class="info-fact-art"><i data-lucide="circle-alert" aria-hidden="true"></i><span class="info-fact-index">04 / ACTÚA</span></div><span class="info-fact-kicker">¿Está autorizada la planta?</span><strong>Aún no aprobada</strong><span>No hay autorización ambiental definitiva. El plazo oficial de alegaciones finaliza el 25 de noviembre de 2026.</span></article>
  </div>
