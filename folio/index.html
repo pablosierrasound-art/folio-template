@@ -679,6 +679,22 @@ html[data-theme="dark"] .site-header{background-color:#111113!important}
 .hero-content .hero-deadline-sticker .sticker-label{font-size:.46rem!important}
 .hero-content .hero-deadline-sticker .sticker-date{font-size:.59rem!important}
 }
+</style><style>
+/* Prioridad visual para la acción de presentar alegaciones */
+.participa-options{border-top:1px solid var(--color-line)}
+.participa-option-featured{position:relative;background:#e9eee8!important;color:#182c22!important;border:1px solid #b8cbbd!important;border-radius:3px;padding:clamp(1.4rem,3vw,2.4rem)!important;margin:1.25rem 0!important;grid-template-columns:3rem minmax(0,1fr)!important;gap:1rem!important;box-shadow:0 9px 25px rgba(29,69,45,.055)}
+.participa-option-featured .participa-option-number{color:#237b55!important;font-size:1.3rem!important}
+.participa-option-featured h3{font-size:clamp(1.9rem,3.5vw,2.8rem)!important;color:#182c22!important;letter-spacing:-.055em!important}
+.participa-option-featured p{color:#52645a!important;max-width:37rem!important}
+.participa-option-featured a{display:inline-flex!important;align-items:center!important;gap:.6rem!important;background:#1e7650!important;border:1px solid #1e7650!important;color:#fff!important;border-radius:100px!important;padding:.8rem 1.25rem!important;text-decoration:none!important;font-size:1rem!important;line-height:1.2!important;transition:background .2s ease,transform .2s ease!important}
+.participa-option-featured a:hover{background:#15553a!important;transform:translateY(-2px)}
+.participa-featured-eyebrow{display:flex;align-items:center;gap:.5rem;margin:0 0 .75rem;color:#237b55;font-size:.68rem;font-weight:850;letter-spacing:.105em;line-height:1.4}
+.participa-featured-dot{width:7px;height:7px;border-radius:50%;background:#237b55}
+@media(max-width:767px){.participa-option-featured{grid-template-columns:2rem minmax(0,1fr)!important;padding:1.3rem 1rem!important;margin:1rem -.2rem!important;gap:.6rem!important}.participa-option-featured h3{font-size:clamp(1.65rem,6vw,2.15rem)!important}.participa-option-featured a{font-size:.9rem!important;padding:.8rem 1rem!important}.participa-featured-eyebrow{font-size:.61rem}}
+html[data-theme="dark"] .participa-option-featured{background:#1b2c24!important;border-color:#355744!important}
+html[data-theme="dark"] .participa-option-featured h3{color:#f2f6ef!important}
+html[data-theme="dark"] .participa-option-featured p{color:#b9cbbd!important}
+html[data-theme="dark"] .participa-featured-eyebrow{color:#8bd1a6!important}
 </style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
@@ -728,7 +744,7 @@ html[data-theme="dark"] .site-header{background-color:#111113!important}
 <div class="participa-heading reveal"><p class="eyebrow">04 / Participa</p><h2 id="participa-title">Ahora puedes <em class="section-serif text-accent">actuar.</em></h2><p>El proyecto todavía no tiene autorización ambiental definitiva. Hasta el <strong>25 de noviembre de 2026</strong> puedes presentar alegaciones durante el trámite de información pública.</p></div>
 <div class="participa-options">
 <article class="participa-option reveal"><span class="participa-option-number">01</span><div><h3>Consulta el proyecto</h3><p>Revisa el expediente ambiental, los planos y la documentación publicada por la Comunidad de Madrid.</p><a href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Ver expediente oficial <span aria-hidden="true">↗</span></a></div></article>
-<article class="participa-option reveal"><span class="participa-option-number">02</span><div><h3>Presenta tus alegaciones</h3><p>Pide que se estudien las emisiones, el tráfico de camiones y los posibles efectos sobre la salud y el entorno. Consulta en el expediente los canales oficiales de presentación.</p><a href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Cómo participar <span aria-hidden="true">↗</span></a></div></article>
+<article class="participa-option participa-option-featured reveal"><span class="participa-option-number">02</span><div><span class="participa-featured-eyebrow"><span class="participa-featured-dot" aria-hidden="true"></span> TU ACCIÓN ES IMPORTANTE</span><h3>Presenta tus alegaciones</h3><p>Pide que se estudien las emisiones, el tráfico de camiones y los posibles efectos sobre la salud y el entorno. Consulta en el expediente los canales oficiales de presentación.</p><a href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Cómo participar <span aria-hidden="true">↗</span></a></div></article>
 <article class="participa-option reveal"><span class="participa-option-number">03</span><div><h3>Comparte la información</h3><p>Ayuda a que más vecinos conozcan el proyecto, los documentos oficiales y el plazo para presentar alegaciones.</p><button class="participa-share" type="button" onclick="if(navigator.share){navigator.share({title:'Defendamos Titulcia',url:location.origin+location.pathname}).catch(()=>{});}else{navigator.clipboard.writeText(location.origin+location.pathname).then(()=>{this.textContent='Enlace copiado ✓'}).catch(()=>{});}">Compartir esta página <span aria-hidden="true">↗</span></button></div></article>
 </div>
 <p class="participa-footnote">El plazo indicado corresponde al trámite de información pública anunciado en octubre de 2026. Comprueba las instrucciones del expediente antes de presentar tus alegaciones.</p>
