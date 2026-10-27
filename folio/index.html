@@ -602,7 +602,17 @@ document.addEventListener('DOMContentLoaded',function(){
  buttons[1].tabIndex=flipped?0:-1;
  });});
 });
-</script></head>
+</script><style>
+/* Corrige la composición del anverso: texto contenido en columna derecha */
+.info-fact-flip .nature-flip-front{display:grid!important;grid-template-columns:30% minmax(0,1fr)!important;grid-template-rows:auto auto 1fr!important;column-gap:0!important;align-content:center!important;padding:1.5rem 1rem 4.5rem 0!important}
+.info-fact-flip .nature-flip-front>.info-fact-art{grid-column:1!important;grid-row:1/4!important;min-width:0!important}
+.info-fact-flip .nature-flip-front>.info-fact-kicker{grid-column:2!important;grid-row:1!important;margin:0 0 .65rem!important;padding-left:1rem!important;min-width:0!important}
+.info-fact-flip .nature-flip-front>strong{grid-column:2!important;grid-row:2!important;margin:0 0 .65rem!important;padding-left:1rem!important;min-width:0!important;overflow-wrap:normal!important}
+.info-fact-flip .nature-flip-front>.nature-flip-description{grid-column:2!important;grid-row:3!important;padding-left:1rem!important;margin:0!important;min-width:0!important;font-size:clamp(.95rem,2.4vw,1.15rem)!important;line-height:1.48!important;color:var(--color-muted)!important}
+.info-fact-flip .nature-flip-front>.nature-flip-button{bottom:1rem!important;right:1rem!important}
+.info-fact-flip .nature-flip-back img{object-position:center 44%}
+@media(max-width:767px){.info-fact-flip,.nature-flip-inner{min-height:325px!important}.info-fact-flip .nature-flip-front{padding:1.1rem .6rem 4.3rem 0!important}.info-fact-flip .nature-flip-front>.info-fact-kicker,.info-fact-flip .nature-flip-front>strong,.info-fact-flip .nature-flip-front>.nature-flip-description{padding-left:.85rem!important}.info-fact-flip .nature-flip-front>.nature-flip-description{font-size:.98rem!important;line-height:1.42!important}.info-fact-flip .nature-flip-front>strong{font-size:clamp(1.45rem,5.5vw,2.2rem)!important}}
+</style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
@@ -619,8 +629,8 @@ document.addEventListener('DOMContentLoaded',function(){
   <article class="info-fact reveal"><div class="info-fact-art"><i data-lucide="truck" aria-hidden="true"></i><span class="info-fact-index">02 / CERCANÍA</span></div><span class="info-fact-kicker">¿Dónde la quieren construir?</span><strong>1,5 <small>km del pueblo</small></strong><span>Junto a la carretera M-404, a aproximadamente kilómetro y medio del casco urbano de Titulcia.</span></article>
   <article class="info-fact info-fact-nature info-fact-flip reveal" id="parque-flip">
 <div class="nature-flip-inner">
-<div class="nature-flip-front"><div class="info-fact-art"><i data-lucide="bird" aria-hidden="true"></i><span class="info-fact-index">03 / NATURALEZA</span></div><span class="info-fact-kicker">¿Qué espacio natural está en riesgo?</span><strong>Parque del Sureste</strong><span>La planta se proyecta a unos 800 metros del Parque Regional del Sureste y muy cerca de zonas protegidas para las aves y otros animales.</span><button type="button" class="nature-flip-button" aria-label="Ver fotografía del Parque Regional del Sureste" aria-expanded="false" aria-controls="parque-foto"><i data-lucide="rotate-3d" aria-hidden="true"></i><span>Ver el parque</span></button></div>
-<div class="nature-flip-back" id="parque-foto" aria-hidden="true"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jarama_Titulcia.jpg?width=1200" alt="Río Jarama a su paso por Titulcia, junto al entorno del Soto de Bayona"/><div class="nature-photo-caption"><strong>Parque Regional del Sureste</strong><span>Río Jarama en Titulcia · Wikimedia Commons</span></div><button type="button" class="nature-flip-button nature-flip-return" aria-label="Volver a la información sobre el parque" tabindex="-1"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Volver</span></button></div>
+<div class="nature-flip-front"><div class="info-fact-art"><i data-lucide="bird" aria-hidden="true"></i><span class="info-fact-index">03 / NATURALEZA</span></div><span class="info-fact-kicker">¿Qué espacio natural está en riesgo?</span><strong>Parque del Sureste</strong><span class="nature-flip-description">A unos 800 metros de la planta proyectada se encuentra este espacio protegido, hogar de aves y otros animales.</span><button type="button" class="nature-flip-button" aria-label="Ver fotografía del Parque Regional del Sureste" aria-expanded="false" aria-controls="parque-foto"><i data-lucide="rotate-3d" aria-hidden="true"></i><span>Ver el parque</span></button></div>
+<div class="nature-flip-back" id="parque-foto" aria-hidden="true"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jarama_Titulcia.jpg?width=2200" alt="Río Jarama a su paso por Titulcia, junto al entorno del Soto de Bayona"/><div class="nature-photo-caption"><strong>Parque Regional del Sureste</strong><span>Río Jarama en Titulcia · Wikimedia Commons</span></div><button type="button" class="nature-flip-button nature-flip-return" aria-label="Volver a la información sobre el parque" tabindex="-1"><i data-lucide="rotate-ccw" aria-hidden="true"></i><span>Volver</span></button></div>
 </div></article>
   <article class="info-fact info-fact-status reveal"><div class="info-fact-art"><i data-lucide="circle-alert" aria-hidden="true"></i><span class="info-fact-index">04 / ACTÚA</span></div><span class="info-fact-kicker">¿Se puede evitar todavía?</span><strong>Aún no aprobada</strong><span>La autorización está pendiente. Puedes presentar alegaciones hasta el 25 de noviembre de 2026.</span></article>
  </div>
