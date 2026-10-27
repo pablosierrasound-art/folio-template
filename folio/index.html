@@ -816,6 +816,7 @@ z-index:4!important;
 <article class="participa-option reveal"><span class="participa-option-number">01</span><div><h3>Consulta el proyecto</h3><p>Consulta la memoria, el estudio de impacto ambiental y los planos oficiales. Expediente: <strong>26-IPPC-00058.6/2026</strong>.</p><a href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Ver expediente oficial <span aria-hidden="true">↗</span></a></div></article>
 <article class="participa-option participa-option-featured reveal"><span class="participa-option-number">02</span><div><span class="participa-featured-eyebrow"><span class="participa-featured-dot" aria-hidden="true"></span> TU ACCIÓN ES IMPORTANTE</span><h3>Presenta tus alegaciones</h3><p>Expón tus preocupaciones sobre el aire, los camiones, la salud o los espacios naturales. Puedes presentar observaciones por registro electrónico o por las vías presenciales admitidas.</p><a href="#guia-alegaciones">Ver los pasos para alegar <span aria-hidden="true">↓</span></a></div></article>
 <article class="participa-option reveal"><span class="participa-option-number">03</span><div><h3>Comparte la información</h3><p>Comparte información contrastada y el enlace al expediente para que otras personas puedan participar.</p><button class="participa-share" type="button" onclick="if(navigator.share){navigator.share({title:'Defendamos Titulcia',url:location.origin+location.pathname}).catch(()=>{});}else{navigator.clipboard.writeText(location.origin+location.pathname).then(()=>{this.textContent='Enlace copiado ✓'}).catch(()=>{});}">Compartir esta página <span aria-hidden="true">↗</span></button></div></article>
+</div>
 <section id="guia-alegaciones" class="allegations-guide" aria-labelledby="guide-title">
 <div class="allegations-guide-head"><p class="eyebrow">GUÍA PRÁCTICA · EXPEDIENTE 26-IPPC-00058.6/2026</p><h3 id="guide-title">Cómo presentar tus <em class="section-serif text-accent">alegaciones.</em></h3><p>No necesitas entender todos los documentos técnicos para trasladar una preocupación concreta. El escrito debe identificar el proyecto y explicar qué quieres que se revise.</p></div>
 <ol class="allegations-steps">
@@ -826,7 +827,7 @@ z-index:4!important;
 </ol>
 <div class="allegations-guide-actions"><a class="btn btn-primary" href="https://sede.comunidad.madrid/prestacion-social/formulario-solicitud-generica" target="_blank" rel="noopener noreferrer">Ir al registro electrónico ↗</a><a class="btn btn-outline" href="https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s" target="_blank" rel="noopener noreferrer">Ver instrucciones oficiales ↗</a></div>
 <p class="allegations-guide-note"><strong>¿Hay que estar empadronado?</strong> La publicación oficial no establece el empadronamiento en Titulcia como requisito para presentar alegaciones. Comprueba la identificación y el canal de presentación que te corresponda. Las personas y entidades obligadas a relacionarse electrónicamente deben usar esa vía.</p>
-</section></div>
+</section>
 <p class="participa-footnote">Información basada en el expediente oficial de la Comunidad de Madrid (26-IPPC-00058.6/2026). Comprueba el estado del trámite y sus instrucciones antes de presentar tu escrito.</p>
 </div></section>
 </main>
@@ -867,6 +868,8 @@ z-index:4!important;
  if(sticker&&day>'2026-11-25')sticker.hidden=true;
  var status=document.querySelector('.info-fact-status');
  if(day>'2026-11-25'){
+   document.querySelectorAll('a[href="#participa"].btn-primary').forEach(function(a){a.innerHTML='Consultar estado del proyecto &rarr;'});
+   var register=document.querySelector('.allegations-guide-actions .btn-primary');if(register){register.href='https://www.comunidad.madrid/transparencia/solicitud-autorizacion-ambiental-integrada-y-estudio-impacto-ambiental-prezero-gestion-residuos-s';register.textContent='Consultar expediente actualizado ↗';}
    if(status){var p=status.querySelector('.info-fact-kicker');var v=status.querySelector('strong');var d=status.querySelector(':scope > span:last-child');if(p)p.textContent='¿Qué pasa tras el plazo?';if(v)v.textContent='Plazo finalizado';if(d)d.textContent='El periodo de información pública terminó el 25 de noviembre de 2026. Consulta el expediente para conocer su estado actualizado.';}
    document.querySelectorAll('.participa-heading > p:last-child').forEach(function(p){p.innerHTML='El plazo de información pública anunciado para este expediente finalizó el <strong>25 de noviembre de 2026</strong>. Consulta su estado actual en la Comunidad de Madrid.'});
    var guide=document.getElementById('guia-alegaciones');if(guide){var h=guide.querySelector('.allegations-guide-head > p:last-child');if(h)h.textContent='Esta guía describe el trámite de alegaciones que finalizó el 25 de noviembre de 2026. Antes de actuar, consulta si hay nuevos procedimientos abiertos.';}
