@@ -10,8 +10,7 @@
   function onScroll() {
     if (header) header.classList.toggle('is-scrolled', window.scrollY > 24);
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  /* La cabecera dinámica gestiona su propio umbral en index.html. */
 
   /* Mobile menu */
   var toggle = document.querySelector('.menu-toggle');
@@ -31,6 +30,7 @@
         setTimeout(function () { if (toggle.getAttribute('aria-expanded') === 'false') menu.hidden = true; }, 350);
       }
     };
+    menu.querySelectorAll('a[href^="#"]').forEach(function (link) { link.addEventListener('click', function () { setMenu(false); }); });
     toggle.addEventListener('click', function () {
       setMenu(toggle.getAttribute('aria-expanded') !== 'true');
     });
