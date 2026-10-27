@@ -780,7 +780,37 @@ z-index:4!important;
 .nature-photo-caption{position:absolute!important;z-index:2!important;bottom:4rem!important;left:1.3rem!important;right:1.3rem!important;color:#fff!important}
 .nature-flip-return{position:absolute!important;z-index:3!important;right:1rem!important;bottom:1rem!important;left:auto!important;top:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;max-width:calc(100% - 2rem)!important;white-space:nowrap!important;padding:.65rem 1rem!important;background:rgba(255,255,255,.96)!important;color:#183f30!important;box-shadow:0 2px 12px rgba(0,0,0,.16)!important}
 .nature-flip-back{position:absolute!important;inset:0!important;overflow:hidden!important;transform:rotateY(180deg)!important;backface-visibility:hidden!important;-webkit-backface-visibility:hidden!important}
-</style></head>
+</style><style>
+/* Desktop-only hero layout: avoids viewport-height whitespace on tall desktop-mode screens.
+   Mobile rules (<=767px) remain unchanged. */
+@media (min-width:768px){
+  #main>section:first-child{
+    min-height:0!important;
+    height:auto!important;
+    padding-top:clamp(11rem,17vw,15rem)!important;
+    padding-bottom:clamp(4rem,7vw,6rem)!important;
+    justify-content:flex-end!important;
+    overflow:hidden;
+  }
+  #main>section:first-child .hero-collage-image{
+    top:clamp(5rem,8vw,8rem)!important;
+    right:-2vw!important;
+    width:min(53vw,820px)!important;
+    height:clamp(340px,46vw,630px)!important;
+  }
+  #main>section:first-child .hero-content h1{
+    margin-top:2rem!important;
+    font-size:clamp(3.6rem,7.5vw,8.6rem)!important;
+    line-height:.95!important;
+    max-width:100%!important;
+  }
+  #main>section:first-child .hero-content .hero-deadline-sticker{
+    top:0!important;
+    right:5%!important;
+  }
+}
+</style>
+</head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
 
