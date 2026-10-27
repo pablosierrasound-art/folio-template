@@ -771,7 +771,7 @@ z-index:4!important;
 .nature-flip-back:before{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.64));pointer-events:none;z-index:1}
 .nature-photo-caption{position:absolute!important;z-index:2!important;bottom:4rem!important;left:1.3rem!important;right:1.3rem!important;color:#fff!important}
 .nature-flip-return{position:absolute!important;z-index:3!important;right:1rem!important;bottom:1rem!important;left:auto!important;top:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;max-width:calc(100% - 2rem)!important;white-space:nowrap!important;padding:.65rem 1rem!important;background:rgba(255,255,255,.96)!important;color:#183f30!important;box-shadow:0 2px 12px rgba(0,0,0,.16)!important}
-.nature-flip-back{position:relative!important;overflow:hidden!important}
+.nature-flip-back{position:absolute!important;inset:0!important;overflow:hidden!important;transform:rotateY(180deg)!important;backface-visibility:hidden!important;-webkit-backface-visibility:hidden!important}
 </style></head>
 <body class="min-h-screen bg-bg text-ink antialiased">
   <a href="#main" class="skip-link">Skip to content</a>
